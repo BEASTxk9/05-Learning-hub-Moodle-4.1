@@ -1,0 +1,62 @@
+/* CSS VARIABLES */
+:root {}
+
+
+/* remove owl loader */
+img[src="https://bpcmoodle05.belpark.sun.ac.za/theme/remui/pix/owl_loader.gif"] {
+    display: none;
+}
+/* Style for a custom loader */
+#page-loader-wrapper::before {
+    content: '';
+    /* Create an empty content box */
+    display: block;
+    /* Make it a block element */
+    width: 50px;
+    /* Set the desired width */
+    height: 50px;
+    /* Set the desired height */
+    border: 4px solid #3498db;
+    /* Set border color and width */
+    border-radius: 50%;
+    /* Create a circle using border-radius */
+    border-top: 4px solid transparent;
+    /* Hide the top border to create a spinner effect */
+    animation: spin 1s linear infinite;
+    /* Add a spinning animation */
+    margin: 0 auto;
+    /* Center the spinner horizontally */
+    margin-top: 20px;
+    /* Adjust the margin as needed */
+}
+/* Keyframes for the spinning animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+/* all */
+
+
+
+
+/* HEADER */
+
+
+
+
+/* MAIN */
+
+
+
+
+/* FOOTER */
