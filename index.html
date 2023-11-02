@@ -3,19 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- add chrome theme -->
+    <meta name="theme-color" content="#4285f4"/>
     <title>Document</title>
 </head>
 <body>
     
 
 
-
-
-    <div class="sections-loader-wrapper" style="display: none;">
-        <div class="sections-loader">
-            <img class="icon " alt="" aria-hidden="true" src="https://bpcmoodle05.belpark.sun.ac.za/theme/image.php/remui/local_remuihomepage/1698876057/owl_loader">
+<header>
+    <nav>
+     <a href="#">Home</a>   
+    </nav>
+</header>
+<main>
+    <section>
+       <div class="container">
+        <div id="card" class="row">
+            <div id="heading" class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+<h2>LOGIN</h2>
+            </div>
+            <div id="content" class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+<!-- email -->
+<input type="email" placeholder="Enter your email." required>
+<!-- password -->
+<input type="password" placeholder="Enter your password." required>
+<!-- message -->
+<input type="text" spellcheck="true" placeholder="Enter your message here." required>
+<!-- file -->
+<input type="file" capture="user" accept="image/*" />
+<!-- color -->
+<input type="color">
+            </div>
         </div>
-    </div>
+    </div>     
+    </section>
+
+</main>
+<footer></footer>
+
+
+
+
+
+
+<style scoped>
+:root{
+    font-family: Roboto mono;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* navbar */
+nav{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.253);
+}
+nav a{
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+}
+
+section{
+    min-height: 100vh;
+}
+
+section, .container{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+#card{
+width: 50vh;  
+max-width: 50vh;
+padding: 10px;
+height: fit-content;
+border: 1px solid rgba(0, 0, 0, 0.253);
+}
+#heading{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+input{
+width: 100%;
+padding-top: 5px;
+padding-bottom: 5px;
+gap: 5px;
+margin-top: 5px;
+}
+
+</style>
+
+
+
+
+
+
+
 
 
 <!-- chatbot code -->
@@ -54,7 +162,7 @@
 </script> -->
 
 <!-- Tristan Custom Footer -->
-<footer class="footer">
+<!-- <footer class="footer">
     <div class="container">
       <div class="footer-row">
         <div class="footer-col">
@@ -219,12 +327,7 @@
     <div class="copyright">
       <p>© 2023 Stellenbosch Business School. All rights reserved</p>
     </div>
-</footer>
+</footer> -->
 
 </body>
 </html>
-
-.progress-wrap.btn-right-side {
-    right: 20px;
-    z-index: 5000;
-}

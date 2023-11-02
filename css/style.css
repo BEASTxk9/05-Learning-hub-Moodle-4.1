@@ -1,7 +1,7 @@
 /* CSS VARIABLES */
 :root {
-
-    --loader: 4px solid #61223b;
+    --maroon: #61223b;
+    --maroon_loader: 4px solid #61223b;
     --footer_faded_text: #95a3a3 !important;
     --transition: all 0.3s ease-in-out;
 }
@@ -29,7 +29,7 @@
     /* Set the desired width */
     height: 50px;
     /* Set the desired height */
-    border: var(--loader_color);
+    border: var(--maroon_loader);
     /* Set border color and width */
     border-radius: 50%;
     /* Create a circle using border-radius */
@@ -58,7 +58,7 @@ img[src="https://bpcmoodle05.belpark.sun.ac.za/theme/remui/pix/owl_loader.gif"] 
     /* Set the desired width */
     height: 50px;
     /* Set the desired height */
-    border: var(--loader_color);
+    border: var(--maroon_loader);
     /* Set border color and width */
     border-radius: 50%;
     /* Create a circle using border-radius */
@@ -96,17 +96,28 @@ header#page-header {
     display: none !important;
 }
 
-/* remove page scroll(shane) */
-#page-site-index div#page-content {
-    height: 20vh;
-}
 
+/* login text(shane) */
+#login_heading{
+    color: var(--maroon);
+}
+#login_subheading{
+
+}
+#login_btn{
+    background-color: var(--maroon);
+    color: white;
+}
 
 
 /* HEADER */
 
-/*NAV-BAR*/
+/* login nav */
+#page-site-index .navbar-toggler-wrapper{
+    display: none;
+}
 
+/*NAV-BAR*/
 .navbar {
     box-shadow: 0px 0px 5px #00000045;
 }
@@ -157,6 +168,15 @@ body.pagelayout-frontpage #page.drawers .main-inner {
 .edw-tabs-navigation .nav-tabs .nav-item .nav-link {
     font-weight: 700;
     box-shadow: none;
+}
+
+/* message scroll(shane) */
+[data-region=right-hand-drawer].hidden {
+    transition: right 0.4s ease-in-out,visibility 0.4s ease-in-out 0.4s,opacity 0s ease-in-out 0.4s !important;
+}
+.drawer {
+    transition: left 0.4s ease,right 0.4s ease,top 0.4s ease,bottom 0.4s ease,visibility 0.4s ease;
+
 }
 
 
