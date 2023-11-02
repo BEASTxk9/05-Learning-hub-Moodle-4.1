@@ -1,8 +1,50 @@
 /* CSS VARIABLES */
-:root {}
+:root {
+
+    --loader: 4px solid #61223b;
+    --footer_faded_text: #95a3a3 !important;
+    --transition: all 0.3s ease-in-out;
+}
 
 
-/* remove owl loader */
+
+
+/* LOGIN LOADER */
+/* remove owl gif */
+#page-site-index .sections-loader-wrapper .sections-loader img.icon {
+    display: none !important;
+}
+/* Style for a custom loader */
+.sections-loader::before {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    content: '';
+    /* Create an empty content box */
+    display: block;
+    /* Make it a block element */
+    width: 50px;
+    /* Set the desired width */
+    height: 50px;
+    /* Set the desired height */
+    border: var(--loader_color);
+    /* Set border color and width */
+    border-radius: 50%;
+    /* Create a circle using border-radius */
+    border-top: 4px solid transparent;
+    /* Hide the top border to create a spinner effect */
+    animation: spin 1s linear infinite;
+    /* Add a spinning animation */
+    margin: 0 auto;
+    /* Center the spinner horizontally */
+    margin-top: 20px;
+    /* Adjust the margin as needed */
+}
+
+/* MAIN SITE LOADER */
+/* remove owl gif */
 img[src="https://bpcmoodle05.belpark.sun.ac.za/theme/remui/pix/owl_loader.gif"] {
     display: none;
 }
@@ -16,7 +58,7 @@ img[src="https://bpcmoodle05.belpark.sun.ac.za/theme/remui/pix/owl_loader.gif"] 
     /* Set the desired width */
     height: 50px;
     /* Set the desired height */
-    border: 4px solid #3498db;
+    border: var(--loader_color);
     /* Set border color and width */
     border-radius: 50%;
     /* Create a circle using border-radius */
@@ -29,6 +71,7 @@ img[src="https://bpcmoodle05.belpark.sun.ac.za/theme/remui/pix/owl_loader.gif"] 
     margin-top: 20px;
     /* Adjust the margin as needed */
 }
+
 /* Keyframes for the spinning animation */
 @keyframes spin {
     0% {
@@ -43,14 +86,78 @@ img[src="https://bpcmoodle05.belpark.sun.ac.za/theme/remui/pix/owl_loader.gif"] 
 
 
 
+/*LOGIN */
 
-/* all */
+/*Login page - Remove header title (Josh) */
+header#page-header {
+    display: none !important;
+}
+#page-header {
+    display: none !important;
+}
 
+/* remove page scroll(shane) */
+#page-site-index div#page-content {
+    height: 20vh;
+}
 
 
 
 /* HEADER */
 
+/*NAV-BAR*/
+
+.navbar {
+    box-shadow: 0px 0px 5px #00000045;
+}
+/*Font-weight - Nav items (Josh)*/
+.navbar .primary-navigation .nav-link,
+.navbar .primary-navigation .more-nav>.dropdown>.dropdown-toggle,
+.navbar #usernavigation .nav-link,
+.navbar #usernavigation .more-nav>.dropdown>.dropdown-toggle {
+    font-weight: 600;
+}
+/*Remove box shadows-icons-nav (Josh)*/
+.navbar .primary-navigation .nav-link,
+.navbar .primary-navigation .more-nav>.dropdown>.dropdown-toggle,
+.navbar #usernavigation .nav-link,
+.navbar #usernavigation .more-nav>.dropdown>.dropdown-toggle {
+    box-shadow: none;
+}
+/*Remove Dropdown - Profile (Josh)*/
+.dropdown-toggle::after {
+    display: none;
+}
+.navbar-brand.logo,
+.navbar-brand .navbar-brand-logo {
+    height: 100%;
+}
+.drawer.drawer-right {
+    background-image: url(https://i.imgur.com/V28PME2.png);
+}
+.drawerheader {
+    height: 20px;
+}
+.drawer.drawer-right .drawerheader button.btn {
+    padding-top: 20px;
+    margin-top: 5vh;
+}
+.course-content ul.topics li.section,
+.course-content ul.weeks li.section {
+    margin-top: 20vh;
+}
+
+body.pagelayout-frontpage #page.drawers .main-inner {
+    background-image: url(https://i.imgur.com/HVD16t6.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 0;
+}
+/*Headings (Josh)*/
+.edw-tabs-navigation .nav-tabs .nav-item .nav-link {
+    font-weight: 700;
+    box-shadow: none;
+}
 
 
 
@@ -60,3 +167,93 @@ img[src="https://bpcmoodle05.belpark.sun.ac.za/theme/remui/pix/owl_loader.gif"] 
 
 
 /* FOOTER */
+
+/* footer styling shane */
+footer h4 {
+    color: white !important;
+    font-size: 2rem;
+}
+footer ul {
+    list-style: none !important;
+    padding-left: 0px !important;
+}
+footer a {
+    color: var(--footer_faded_text);
+    text-decoration: none !important;
+    transition: var(--transition);
+}
+footer a:hover {
+    margin-left: 3px;
+    color: white !important;
+}
+
+
+/* copyright text */
+@media only screen and (max-width: 1400px) {
+    #page-footer .footer-container .footer-secondarysection-wrapper .footer-copyright-wrapper .copyright-content p {
+        justify-content: center !important;
+    }
+}
+#page-footer .footer-container .footer-secondarysection-wrapper .footer-copyright-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+/*Remove pop-over items (Josh)*/
+.popover.footer .popover-body .footer-section:first-child {
+    display: none;
+}
+.popover.footer .popover-body .footer-section:last-child {
+    display: none;
+}
+.popover.footer .popover-body .footer-section .footer-popover-section-links {
+    display: none;
+}
+.tool_usertours-resettourcontainer {
+    display: none !important;
+}
+
+
+/*Footer image (Josh) */
+#page-footer {
+    background-image: url(https://i.imgur.com/sUk9R6H.jpg) !important;
+}
+.atto_image_button_text-bottom.img-fluid {
+    max-width: calc(100%);
+}
+
+
+
+
+/* ALL */
+
+/*DASHBOARD*/
+/*Remove dashboard course stats(Josh)*/
+.edw-stats-wrapper {
+    display: none !important;
+}
+
+/* cards */
+/* Add light box shadow-Cards (Josh)*/
+.dashboard-card-deck .dashboard-card {
+    box-shadow: 0px 0px 5px #00000033;
+}
+/*Remove filter-Add shadow-cards (Josh)*/
+.dashboard-card {
+    filter: none;
+    box-shadow: 0px 0px 5px #00000066;
+    border: 1px solid #c6a675 !important;
+}
+.main-area-bg:not(.pagelayout-login) div[role="main"] {
+    filter: none;
+}
+.atto_image_button_text-bottom {
+    margin: 0;
+}
+.dashboard-card:hover {
+    transform: scale(1.03);
+    transition: 0.2s;
+    transition-timing-function: cubic-bezier(0, -1.21, 0.71, 0);
+}
