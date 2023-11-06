@@ -88,15 +88,13 @@ img[src="https://bpcmoodle05.belpark.sun.ac.za/theme/remui/pix/owl_loader.gif"] 
 
 /*LOGIN */
 
-/*Login page - Remove header title (Josh) */
-header#page-header {
-    display: none !important;
+/* login banner (Josh) */
+body.pagelayout-frontpage #page.drawers .main-inner {
+    background-image: url(https://i.imgur.com/HVD16t6.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 0;
 }
-#page-header {
-    display: none !important;
-}
-
-
 /* login text(shane) */
 #login_heading{
     color: var(--maroon);
@@ -107,6 +105,16 @@ header#page-header {
 #login_btn{
     background-color: var(--maroon);
     color: white;
+}
+body#page-site-index.latest-frontpage #region-main-box, body#page-site-index.latest-frontpage #region-main {
+    margin-top: 20vh;
+}
+#page.drawers .main-inner {
+    margin-bottom: 0.5rem;
+}
+#page-footer .footer-container {
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 
@@ -139,38 +147,18 @@ header#page-header {
 .dropdown-toggle::after {
     display: none;
 }
+/*Nav Logo (Josh)*/
 .navbar-brand.logo,
 .navbar-brand .navbar-brand-logo {
     height: 100%;
 }
-.drawer.drawer-right {
-    background-image: url(https://i.imgur.com/V28PME2.png);
-}
-.drawerheader {
-    height: 20px;
-}
-.drawer.drawer-right .drawerheader button.btn {
-    padding-top: 20px;
-    margin-top: 5vh;
-}
-.course-content ul.topics li.section,
-.course-content ul.weeks li.section {
-    margin-top: 20vh;
-}
-
-body.pagelayout-frontpage #page.drawers .main-inner {
-    background-image: url(https://i.imgur.com/HVD16t6.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-top: 0;
-}
-/*Headings (Josh)*/
+/*Nav Headings (Josh)*/
 .edw-tabs-navigation .nav-tabs .nav-item .nav-link {
     font-weight: 700;
     box-shadow: none;
 }
 
-/* message scroll(shane) */
+/* chat box open and close animation(shane) */
 [data-region=right-hand-drawer].hidden {
     transition: right 0.4s ease-in-out,visibility 0.4s ease-in-out 0.4s,opacity 0s ease-in-out 0.4s !important;
 }
@@ -179,49 +167,130 @@ body.pagelayout-frontpage #page.drawers .main-inner {
 
 }
 
+/*slow notification transition (Tristan)*/
+.navbar .sub-nav .primary-navigation, .navbar .sub-nav #usernavigation .edwiser-navigation, .navbar .sub-nav #user-action-menu, .navbar .sub-nav .popover-region-container, .navbar .sub-nav .simplesearchform input, .navbar .sub-nav .simplesearchform input::placeholder {
+    transition: 0.6s ease-out;
+}
 
 
 /* MAIN */
 
 
+/*LEFT MENU*/
 
+/*Adds scroll to left menu (Tristan)*/
+nav#courseindex {
+    overflow: scroll;
+}
+
+/*DASHBOARD*/
+
+/* Adds padding bottom to course card grid (Tristan) */
+.edw-course-card-grid {
+    display: grid;
+    grid-template-columns: repeat(4,minmax(auto,25%));
+    gap: 24px;
+    padding-bottom: 20px;
+}
+
+/* global pop up btn remove link (shane) */
+a[href="https://edwiser.helpscoutdocs.com/category/83-product-support"]{
+display: none !important;
+}
+
+/* right menu clock(shane) */
+.block_simple_clock .clockTable .block_simple_clock .clockTable:nth-child(1){
+    content: "Stellenbosch Business School(GMT+2)" !important;
+}
 
 /* FOOTER */
 
-/* footer styling shane */
-footer h4 {
-    color: white !important;
-    font-size: 2rem;
+/*Styling for footer (Tristan)*/
+.footer {
+  font-family: Arial, Helvetica, sans-serif;
 }
-footer ul {
-    list-style: none !important;
-    padding-left: 0px !important;
+.container {
+  max-width: 1170px;
+  margin: auto;
 }
-footer a {
-    color: var(--footer_faded_text);
-    text-decoration: none !important;
-    transition: var(--transition);
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
 }
-footer a:hover {
-    margin-left: 3px;
-    color: white !important;
+.footer-links {
+  list-style: none;
+  padding-left: 0 !important;
+}
+.footer-col {
+  width: 20%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 16px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 300;
+  color: #c0c0c0 !important;
+  display: block;
+  transition: all 0.5s ease;
+}
+.footer-col ul li a:hover {
+  color: #ffffff !important;
+  padding-left: 5px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 27px;
+  width: 27px;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 28px;
+  border-radius: 50%;
+  color: white !important;
+  transition: all 0.3s ease;
+}
+.footer-col .social-links a:hover {
+  color: #61223b !important;
+  background-color: white !important;
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white !important;
+  padding-top: 20px;
+}
+#page-wrapper #page-footer {
+  background-color: #61223b !important;
+  background-image: url(https://i.imgur.com/sUk9R6H.jpg);
+}
+/* Makes footer responsive */
+@media (max-width: 885px) {
+  .footer-col {
+    width: 40%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
 }
 
 
-/* copyright text */
-@media only screen and (max-width: 1400px) {
-    #page-footer .footer-container .footer-secondarysection-wrapper .footer-copyright-wrapper .copyright-content p {
-        justify-content: center !important;
-    }
-}
-#page-footer .footer-container .footer-secondarysection-wrapper .footer-copyright-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
+/*POP UP BUTTON*/
 
-
-/*Remove pop-over items (Josh)*/
+/*Remove footer items (Josh)*/
 .popover.footer .popover-body .footer-section:first-child {
     display: none;
 }
@@ -234,16 +303,25 @@ footer a:hover {
 .tool_usertours-resettourcontainer {
     display: none !important;
 }
-
-
-/*Footer image (Josh) */
-#page-footer {
-    background-image: url(https://i.imgur.com/sUk9R6H.jpg) !important;
+/*Remove Edwiser feedback btn*/
+button.btn.btn-floating.d-none.d-md-flex.send-remui-feedback {
+    display: none !important;
+}
+footer a:hover {
+    color: inherit !important;
 }
 .atto_image_button_text-bottom.img-fluid {
     max-width: calc(100%);
 }
-
+.popover.footer .popover-body .footer-section:not(:last-child) {
+    border-radius: 8px;
+}
+/* Footer media querie to hide items */
+@media (max-width: 767.98px){
+    #page-footer .footer-container .footer-content-popover {
+    display: none;
+}
+}
 
 
 
@@ -254,26 +332,150 @@ footer a:hover {
 .edw-stats-wrapper {
     display: none !important;
 }
+/*Center headings on dashboard (Josh)*/
+.block .block-header-wrapper .block-header {
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn:focus, #page-calendar-view .cal_courses_flt:focus, .btn.focus, #page-calendar-view .focus.cal_courses_flt {
+     box-shadow: none;
+}
+.text-truncate {
+    white-space: normal;
+}
+#page-header .dashboard-bar-wrapper .page-context-header {
+    margin-left: auto;
+    margin-right: auto;
+}
 
-/* cards */
-/* Add light box shadow-Cards (Josh)*/
+/*CARDS*/
+/* Add light box-shadow(Josh)*/
 .dashboard-card-deck .dashboard-card {
     box-shadow: 0px 0px 5px #00000033;
+margin-top: 1vh;
 }
-/*Remove filter-Add shadow-cards (Josh)*/
+/*Remove filter-Add shadow(Josh)*/
 .dashboard-card {
     filter: none;
     box-shadow: 0px 0px 5px #00000066;
-    border: 1px solid #c6a675 !important;
 }
+/*Remove filter(Josh)*/
 .main-area-bg:not(.pagelayout-login) div[role="main"] {
     filter: none;
 }
+/*Dashboard img(Josh)*/
 .atto_image_button_text-bottom {
     margin: 0;
 }
+/*Dashboard hover(Josh)*/
 .dashboard-card:hover {
     transform: scale(1.03);
     transition: 0.2s;
     transition-timing-function: cubic-bezier(0, -1.21, 0.71, 0);
+}
+.dashboard-card-deck .dashboard-card {
+    flex-shrink: 1;
+}
+
+/*COURSE*/
+/*Gap close (Josh)*/
+#page.drawers .main-inner {
+    margin-top: 0.5rem;
+}
+/*Remove useless course info (Josh)*/
+body#page-course-view-remuiformat header.hasbackground.design-1 .header-main-section .category .badge {
+    display: none;
+}
+/*Remove useless course info (Josh)*/
+body#page-course-view-remuiformat .course-content .sections #section-0 .general-section .section-details .coursedetails .details {
+    display: none !important;
+}
+/*Remove useless course info - course cards (Josh)*/
+body#page-course-view-remuiformat .course-content .sections #section-0 .general-section .activities-wrapper .activitieshead {
+    display: none;
+}
+/*Border - intro course cards (Josh)*/
+body#page-course-view-remuiformat .course-content .sections #section-0 .general-section .activities-wrapper .general-section-activities .activity:not(.modtype_label) {
+    border: 1px solid #d3b994;
+}
+/*Remove useless course info - course cards (Josh)*/
+body#page-course-view-remuiformat .remui-format-card.all-section-format .section .single-card .content .section-activities-summary .item {
+    display: none;
+}
+/*Border course cards (Josh)*/
+body#page-course-view-remuiformat .remui-format-card.all-section-format .section .single-card {
+    border: 1px solid #cdb084;
+}
+/*Word alignment intro cards (Josh)*/
+body#page-course-view-remuiformat .activity .activitytitle .media-body .activityname a {
+    word-break: keep-all;
+}
+
+
+
+
+/* DRAWERS */
+/*Center headings on right drawer (Josh)*/
+#block-region-side-pre .block-header-wrapper .block-header {
+    margin-right: auto;
+    margin-left: auto;
+}
+/*Add border to calendar (Josh)*/
+#block-region-side-pre .block-content-area .calendarwrapper {
+    border: 1px solid #61223b;
+}
+/*Remove box-shadow (Josh)*/
+.drawer.scrolled .drawerheader {
+    box-shadow: none;
+}
+/*Remove padding (Josh)*/
+.drawer.drawer-right .drawerheader button.btn {
+    padding-top: 0;
+}
+
+/*Drawer btn (Josh)*/
+.drawer.drawer-right .drawerheader .drawertoggle .edw-icon {
+      font-size:30px;
+      padding-bottom: 30px;
+      padding-right: 30px;
+}
+.drawer.drawer-left .drawerheader .drawertoggle .edw-icon{
+      font-size:30px;
+      padding-bottom: 30px;
+     padding-right: 30px;
+}
+.drawer.drawer-right .drawerheader .drawertoggle .edw-icon:hover {
+    box-shadow: 0px 0px 2px;
+    border-radius: 8px;
+}
+.drawer.drawer-left .drawerheader .drawertoggle .edw-icon:hover {
+    box-shadow: 0px 0px 2px;
+    border-radius: 8px;
+}
+.drawer.drawer-left .drawerheader .drawertoggle .edw-icon:focus {
+    box-shadow: none;
+}
+.drawer.drawer-right .drawerheader .drawertoggle .edw-icon:focus {
+    box-shadow: none !important;
+}
+/*Timetable (Josh)*/
+.block_timetable .events {
+    margin: 2vh 0vh 2vh 2vh !important;
+    padding: 2vh 2vh 2vh 2vh;
+}
+.drawer.drawer-right {
+    background-image: url(https://i.imgur.com/V28PME2.png);
+}
+.drawerheader {
+    height: 20px;
+}
+/*Tristan update*/
+.drawer.drawer-right .drawerheader button.btn {
+    padding-top: 20px;
+    /*margin-top: 5vh;*/
+}
+
+/* side menu clock */
+.block_simple_clock .clock {
+    pointer-events: none;
 }
